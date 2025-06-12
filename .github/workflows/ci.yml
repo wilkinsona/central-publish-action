@@ -30,9 +30,9 @@ jobs:
       - name: Build Sonatype Portal Mock docker image
         uses: ./.github/actions/build
         with:
-          gradle-task: ':sonatype-portal-mock:bootBuildImage --imageName ghcr.io/${{ github.repository_owner }}/sonatype-portal-mock:latest'
+          gradle-task: ':sonatype-portal-mock:bootBuildImage --imageName ghcr.io/${{ github.repository_owner }}/sonatype-central-portal-mock:latest'
       - name: Push Docker image
-        run: docker push ghcr.io/${{ github.repository_owner }}/sonatype-portal-mock:latest
+        run: docker push ghcr.io/${{ github.repository_owner }}/sonatype-central-portal-mock:latest
   integration-test:
     name: 'Integration test'
     runs-on: 'ubuntu-latest'
@@ -41,7 +41,7 @@ jobs:
       - build-and-publish-sonatype-portal-mock
     services:
       sonatype-portal-mock:
-        image: ghcr.io/${{ github.repository_owner }}/sonatype-portal-mock:latest
+        image: ghcr.io/${{ github.repository_owner }}/sonatype-central-portal-mock:latest
         ports:
           - 8080:8080
         env:
