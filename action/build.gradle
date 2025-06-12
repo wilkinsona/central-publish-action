@@ -11,7 +11,7 @@ repositories {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+        languageVersion = JavaLanguageVersion.of(24)
     }
 }
 
@@ -57,7 +57,7 @@ tasks.withType(Test) {
 }
 
 tasks.named("jar") {
-    enabled = false;
+    enabled = false
 }
 
 tasks.named("bootJar") {
