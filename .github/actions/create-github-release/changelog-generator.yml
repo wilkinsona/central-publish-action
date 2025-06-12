@@ -10,5 +10,9 @@ changelog:
     - title: ":notebook_with_decorative_cover: Documentation"
       labels:
         - "type: documentation"
+    - title: ":hammer: Dependency Upgrades"
+      sort: "title"
+      labels:
+        - "type: dependency-upgrade"
   issues:
     generate_links: true
