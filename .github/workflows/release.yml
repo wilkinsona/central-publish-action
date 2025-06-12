@@ -33,4 +33,4 @@ jobs:
         uses: ./.github/actions/create-github-release
         with:
           milestone: ${{ needs.build.outputs.version }}
-          token: ${{ secrets.GH_ACTIONS_REPO_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
