@@ -35,7 +35,7 @@ Defaults to `1m`.
 ----
 steps:
   - name: Deploy
-    uses: spring-io/central-publish-action@main
+    uses: spring-io/central-publish-action@0cdd90d12e6876341e82860d951e1bcddc1e51b6 # v0.2.0
     with:
       token-name: ${{ secrets.SONATYPE_TOKEN_NAME }}
       token: ${{ secrets.SONATYPE_TOKEN }}
@@ -50,7 +50,7 @@ This can be configured by passing through the value of the `ACTIONS_STEP_DEBUG` 
 ----
 steps:
   - name: Deploy
-    uses: spring-io/central-publish-action@main
+    uses: spring-io/central-publish-action@0cdd90d12e6876341e82860d951e1bcddc1e51b6 # v0.2.0
     env:
       ACTION_STEPS_DEBUG: ${{ secrets.ACTIONS_STEP_DEBUG }}
 ----
