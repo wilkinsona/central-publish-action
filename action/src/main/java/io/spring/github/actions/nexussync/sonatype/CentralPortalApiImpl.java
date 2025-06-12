@@ -70,7 +70,7 @@ class CentralPortalApiImpl implements CentralPortalApi {
 		this.sleepBetweenRetries = sleepBetweenRetries;
 		this.restClient = restClientBuilder.baseUrl(baseUri)
 			.defaultHeader("Accept", "application/json")
-			.defaultHeader("User-Agent", "nexus-sync-action")
+			.defaultHeader("User-Agent", "central-publish-action")
 			.defaultHeader("Authorization", createAuthorizationHeader(tokenName, token))
 			.build();
 	}
@@ -102,7 +102,7 @@ class CentralPortalApiImpl implements CentralPortalApi {
 	}
 
 	private String createDeploymentName() {
-		return "nexus-sync-action-" + this.clock.instant();
+		return "central-publish-action-" + this.clock.instant();
 	}
 
 	private static MultiValueMap<String, Object> createBody(Bundle bundle) {

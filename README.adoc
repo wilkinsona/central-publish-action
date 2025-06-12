@@ -1,4 +1,4 @@
-= Nexus Sync Action
+= Central Publish Action
 
 A https://docs.github.com/en/actions[GitHub action] for publishing a local directory containing artifacts to the https://central.sonatype.org/register/central-portal/[Sonatype Central Portal].
 
@@ -35,7 +35,7 @@ Defaults to `1m`.
 ----
 steps:
   - name: Deploy
-    uses: spring-io/nexus-sync-action@main
+    uses: spring-io/central-publish-action@main
     with:
       token-name: ${{ secrets.SONATYPE_TOKEN_NAME }}
       token: ${{ secrets.SONATYPE_TOKEN }}
@@ -50,7 +50,7 @@ This can be configured by passing through the value of the `ACTIONS_STEP_DEBUG` 
 ----
 steps:
   - name: Deploy
-    uses: spring-io/nexus-sync-action@main
+    uses: spring-io/central-publish-action@main
     env:
       ACTION_STEPS_DEBUG: ${{ secrets.ACTIONS_STEP_DEBUG }}
 ----
